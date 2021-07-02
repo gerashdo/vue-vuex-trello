@@ -8,6 +8,9 @@
 </head>
 <body>
     <div id="app">
+        <button @click="changeVisibility">
+            Mostrar/Ocultar
+        </button>
         <ul v-if="mostrar">
             <li v-for="(show, index) in tvshows" :key="index">
                 <strong> {{ show.name }} </strong> ({{ show.seasons }} Temporadas)
@@ -29,6 +32,11 @@
                     {name: 'LOST', seasons: 6},
                     {name: 'Dark', seasons:3}
                 ]
+            },
+            methods: {
+                changeVisibility: function() {
+                    this.mostrar = !this.mostrar
+                }
             }
         })
     </script>
