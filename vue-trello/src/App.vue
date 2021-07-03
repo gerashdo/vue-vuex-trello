@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-eader></app-eader>
+    <app-header></app-header>
     <router-view class="container"/>
     <app-footer></app-footer>
   </div>
@@ -12,7 +12,7 @@ import AppHeader from '@/components/AppHeader'
 
 export default {
   components: { AppFooter, AppHeader },
-  name: 'App',
+  name: 'App'
 }
 </script>
 
