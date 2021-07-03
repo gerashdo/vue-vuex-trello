@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>Mis Paneles</h3>
-        <div class="boards-collection">
+        <div class="board-collection">
             <input 
             type="text"
             placeholder="Añade un nuevo panel"
