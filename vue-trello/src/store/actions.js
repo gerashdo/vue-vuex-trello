@@ -3,7 +3,7 @@ import API from '@/api'
 
 export default {
     // Fetch via ajax de los paneles de lusuario
-    fetchBoard ({ commit }, { user }) {
+    fetchBoards ({ commit }, { user }) {
         commit(types.FETCH_BOARDS_REQUEST)
 
         API.getBoardsByUser(user)
