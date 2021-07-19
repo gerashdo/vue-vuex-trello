@@ -18,7 +18,7 @@ export default {
       .set(board)
       .then(() => board)
   },
-  getListFromBoard(boardId) {
+  getListsFromBoard(boardId) {
     const query = listsRef.orderByChild('board').equalTo(boardId)
     return query.once('value')
   },
@@ -47,7 +47,7 @@ export default {
   deleteTask(taskId) {
     return tasksRef.child(taskId).remove()
   },
-  completeTask(taskId) {
+  completedTask(taskId) {
     const query = tasksRef.child(taskId).child('completed')
     return query
       .once('value')
