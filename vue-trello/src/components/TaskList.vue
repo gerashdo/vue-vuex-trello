@@ -4,6 +4,7 @@
       v-for="(task, index) in tasks"
       :key="index"
       :class="{ completed: task.completed }"
+      @click="markAsCompleted({ task })"
     >
       {{ task.title }}
     </li>
@@ -31,7 +32,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['addTasks']),
+    ...mapActions(['addTasks', 'markAsCompleted']),
     add() {
       this.addTasks({ list: this.listId, title: this.title })
       this.title = ''
