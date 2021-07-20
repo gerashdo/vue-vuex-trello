@@ -5,6 +5,7 @@
       :key="index"
       :class="{ completed: task.completed }"
       @click="markAsCompleted({ task })"
+      @dblclick="deleteTask({ taskId: task.id })"
     >
       {{ task.title }}
     </li>
@@ -32,7 +33,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['addTasks', 'markAsCompleted']),
+    ...mapActions(['addTasks', 'markAsCompleted', 'deleteTask']),
     add() {
       this.addTasks({ list: this.listId, title: this.title })
       this.title = ''
