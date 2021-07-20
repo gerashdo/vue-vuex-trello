@@ -39,6 +39,7 @@ export default {
     ...mapActions(['fetchBoards', 'addBoard']),
     add() {
       this.addBoard({ name: this.boardName })
+      this.boardName = ''
     },
   },
   created() {
