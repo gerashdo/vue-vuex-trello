@@ -44,9 +44,9 @@ export default {
   },
 
   methods: {
-    ...mapActions(['fetchLists', 'addClumn']),
+    ...mapActions(['fetchLists', 'addColumn']),
     add() {
-      this.addClumn({ board: this.id, name: this.listName })
+      this.addColumn({ board: this.id, name: this.listName })
       this.listName = ''
     },
   },

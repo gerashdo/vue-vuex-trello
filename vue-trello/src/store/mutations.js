@@ -47,6 +47,7 @@ export default {
         state.fetchingData = false
         state.error = null
         state.tasks = { ...tasks }
+        // state.tasks = Object.assign({}, state.tasks, tasks)
     },
 
     [types.FETCH_TASKS_FAILURE](state, { error }) {
